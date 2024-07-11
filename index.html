@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Lúdico de Matemáticas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <h1>Juego Lúdico de Matemáticas</h1>
+        <div id="menu">
+            <h2>Elige el tipo de ejercicio</h2>
+            <button class="exerciseButton" data-exercise="addition">Suma</button>
+            <button class="exerciseButton" data-exercise="subtraction">Resta</button>
+            <button class="exerciseButton" data-exercise="multiplication">Multiplicación</button>
+            <button class="exerciseButton" data-exercise="division">División</button>
+            <button class="exerciseButton" data-exercise="exponentiation">Potencias</button>
+            <button class="exerciseButton" data-exercise="sqrt">Raíz Cuadrada</button>
+        </div>
+        <div id="game" class="hidden">
+            <p id="question">Pregunta: </p>
+            <input type="number" id="answer" placeholder="Tu respuesta">
+            <button id="submitAnswer">Enviar Respuesta</button>
+            <p id="feedback"></p>
+            <p id="score">Puntuación: 0</p>
+            <p id="timer">Tiempo: 60</p>
+            <button id="resetGame" class="hidden">Reiniciar Juego</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

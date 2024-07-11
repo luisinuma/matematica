@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: #000;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #4caf50;
+}
+
+h2 {
+  color: #333;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border: 2px solid #4caf50;
+  border-radius: 5px;
+}
+
+#feedback {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #d9534f;
+}
+
+#score,
+#timer {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+@keyframes moveParticles {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(-2000px) translateX(2000px);
+  }
+}
+
+.particle {
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: moveParticles 10s linear infinite;
+}
